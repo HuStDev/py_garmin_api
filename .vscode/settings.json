@@ -1,0 +1,6 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
+    "python.terminal.activateEnvironment": true,
+    "autoDocstring.docstringFormat": "sphinx",
+    "autoDocstring.quoteStyle": "'''"
+}

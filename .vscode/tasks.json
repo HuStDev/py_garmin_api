@@ -1,0 +1,24 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "command": [
+                "python",
+                "-m",
+                "pip",
+                "install",
+                "-r",
+                "${workspaceFolder}/requirements.txt",
+                "-r",
+                "${workspaceFolder}/requirements_devenv.txt"
+            ],
+            "group": "none",
+            "label": "[Python] pip update requirements",
+            "detail": "Updates pip packages from requirements.txt and requirements_devenv.txt.",
+            "problemMatcher": []
+        }
+    ]
+  }

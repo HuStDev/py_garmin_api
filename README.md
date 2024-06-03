@@ -1,1 +1,1 @@
-# py_garmin_bindings
+# Python Garmin API
