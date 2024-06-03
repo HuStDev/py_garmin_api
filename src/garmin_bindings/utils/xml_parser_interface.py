@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 import typing
+from lxml.etree import Element
+from activity import Activity, Lap
 
 class XmlParserInterface(ABC):
 
@@ -17,7 +19,7 @@ class XmlParserInterface(ABC):
 
     @property
     def key_root_namespace(self) -> str:
-        return ''
+        return None
 
     @property
     @abstractmethod
@@ -33,3 +35,11 @@ class XmlParserInterface(ABC):
     @abstractmethod
     def tag_activity(self) -> str:
         return None
+    
+    @abstractmethod
+    def parse_activity(self, element: Element) -> Activity:
+        return Activity()
+    
+    @abstractmethod
+    def parse_lap(self, element: Element) -> Lap:
+        return Lap()
